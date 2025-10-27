@@ -2,7 +2,7 @@
 
 import './App.css'
 import api from './services/api'
-import { createBrowserRouter, RouterProvider, Link, useRouteError, Outlet, isRouteErrorResponse } from 'react-router-dom'
+import { createHashRouter, RouterProvider, Link, useRouteError, Outlet, isRouteErrorResponse } from 'react-router-dom'
 import { AllContacts } from './components/pages/AllContacts'// Correction orthographique
 import { Layout } from './components/pages/Layout'
 import { Single } from './components/pages/singleContac'
@@ -40,7 +40,7 @@ export type Contact = {
     updatedAt: string
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Layout />,
