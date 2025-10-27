@@ -2,11 +2,11 @@ import { useLoaderData, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { useAuth } from "../hooks/useAuth";
-import { ChatInterface } from "./chatInterface"; // ✅ IMPORT MANQUANT !
+// import { ChatInterface } from "./chatInterface"; // ✅ IMPORT MANQUANT !
 
 export function Single() {
   const res = useLoaderData();
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated } = useAuth();
   const [isUserContact, setIsUserContact] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -197,7 +197,7 @@ export function Single() {
             <h3 className="card-title text-lg mb-4">
               💬 Conversation avec {contact.firstname} {contact.lastname}
             </h3>
-            <ChatInterface contactEmail={contact.email} />
+            {/* <ChatInterface contactEmail={contact.email} /> */}
           </div>
         </div>
       )}

@@ -17,7 +17,7 @@ import { HomePage } from './components/pages/Acceuil'
 import { LoginUser } from './components/pages/Login'
 import { EditProfile } from './components/pages/EditProfile'
 import { AuthProvider } from './components/Contexts/AuthContext'
-import { Message } from './components/pages/Message'
+// import { Message } from './components/pages/Message'
 
 function LoadingFallback() {
   return (
@@ -126,17 +126,17 @@ const router = createBrowserRouter([
               return response.data;
             }
           }, 
-          {
-            path: 'messages',
-            element: <ProtectedRoute><Message /></ProtectedRoute>,
-            loader: async () => {
-              const token = localStorage.getItem('authToken');
-              const response = await api.get('/users/me', {
-                headers: { Authorization: `Bearer ${token}` }
-              });
-              return response.data;
-            }
-          }
+          // {
+          //   path: 'messages',
+          //   element: <ProtectedRoute><Message /></ProtectedRoute>,
+          //   loader: async () => {
+          //     const token = localStorage.getItem('authToken');
+          //     const response = await api.get('/users/me', {
+          //       headers: { Authorization: `Bearer ${token}` }
+          //     });
+          //     return response.data;
+          //   }
+          // }
         ]
     }
 ])

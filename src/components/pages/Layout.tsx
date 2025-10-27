@@ -121,7 +121,7 @@ export function Layout() {
               </NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink 
                 to="/messages" 
                 className={({ isActive }) => 
@@ -133,7 +133,7 @@ export function Layout() {
                 </svg>
                 <span>Messages</span>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
           
           {/* Footer sidebar */}
