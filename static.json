@@ -1,14 +1,7 @@
 {
   "root": "dist",
-  "clean_urls": false,
-  "trailing_slash": false,
   "routes": {
-    "/**": {
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-      },
-      "rewrite": "/index.html"
-    }
+    "/**": "index.html"
   },
   "headers": {
     "/**": {
