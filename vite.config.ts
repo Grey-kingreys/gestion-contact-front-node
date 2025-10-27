@@ -7,8 +7,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets'
   },
-  // IMPORTANT : Utiliser des chemins relatifs
-  base: '',
+  base: './',
   server: {
     port: 3000,
   }
